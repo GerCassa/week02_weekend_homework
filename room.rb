@@ -3,10 +3,10 @@ class Room
 
   def initialize(name, songs, till)
     @name = name
-    @capacity = 10
-    @people_inside = 0
     @songs = songs
     @till = till
+    @capacity = 10
+    @people_inside = 0
   end
 
   def get_song_by_name(name)
