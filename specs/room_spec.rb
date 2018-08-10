@@ -14,7 +14,7 @@ class RoomTest < MiniTest::Test
     @song5 = Song.new("Come Together", "Artist: The Beatles, Year: 1969, Length: 03:50mins", "https://www.youtube.com/watch?v=iKIbKbD3U_8")
     rock_songs = [@song1, @song2, @song3, @song4, @song5]
 
-    @room = Room.new("Rock Room", 0, rock_songs, 100)
+    @room = Room.new("Rock Room", rock_songs, 100)
   end
 
   def test_room_has_name
@@ -22,7 +22,11 @@ class RoomTest < MiniTest::Test
   end
 
   def test_room_has_capacity
-    assert_equal(0, @room.capacity)
+    assert_equal(10, @room.capacity)
+  end
+
+  def test_people_inside_room
+    assert_equal(0, @room.people_inside)
   end
 
   def test_room_has_Planet_Caravan
