@@ -8,4 +8,8 @@ class Guest
     @fav_song = fav_song
   end
 
+  def money_out(amount)
+    @wallet -= amount
+  end
+
 end

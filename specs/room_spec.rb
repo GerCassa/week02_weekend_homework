@@ -44,10 +44,19 @@ class RoomTest < MiniTest::Test
   end
 
   def test_add_people
-    @room.add_people_to_room(1)
+    @room.add_people_to_room
     assert_equal(1, @room.people_inside)
   end
 
+  def test_remove_people
+    @room.add_people_to_room
+    @room.add_people_to_room
+    @room.add_people_to_room
+    @room.add_people_to_room
+    @room.remove_people_from_room
+    @room.remove_people_from_room
+    assert_equal(2, @room.people_inside)
+  end
 
 
 end
