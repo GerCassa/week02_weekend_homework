@@ -30,7 +30,8 @@ class RoomTest < MiniTest::Test
   end
 
   def test_room_has_many_songs
-    assert_equal(6, @room.songs.size)
+    @room.add_new_song(@song6 = Song.new("Everlong", "Artist: Foo Fighters, Year: 1997, Length: 04:13", "https://www.youtube.com/watch?v=FB_1lXUflvc"))
+    assert_equal(6, @room.songs.count)
   end
 
   def test_room_has_Planet_Caravan

@@ -19,4 +19,10 @@ class Room
     end
   end
 
+  def add_new_song(new_song)
+    songs << new_song
+  end
+
+
+
 end
