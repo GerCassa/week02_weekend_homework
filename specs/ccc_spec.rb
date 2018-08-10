@@ -16,8 +16,5 @@ class CccTest < MiniTest::Test
     assert_equal(2, @ccc.rooms.count)
   end
 
-  def test_get_number_of_people_inside_room
-    assert_equal(0, @room1.people_inside)
-  end
 
 end

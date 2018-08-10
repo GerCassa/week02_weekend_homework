@@ -6,4 +6,5 @@ class Ccc
     @till = 0
   end
 
+
 end

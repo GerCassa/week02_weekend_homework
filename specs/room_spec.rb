@@ -29,6 +29,10 @@ class RoomTest < MiniTest::Test
     assert_equal(0, @room.people_inside)
   end
 
+  def test_room_has_many_songs
+    assert_equal(6, @room.songs.size)
+  end
+
   def test_room_has_Planet_Caravan
     result = @room.get_song_by_name("Ramble On")
     assert_equal(@song2, result)
@@ -36,6 +40,11 @@ class RoomTest < MiniTest::Test
 
   def test_room_has_till
     assert_equal(100, @room.till)
+  end
+
+  def test_add_people
+    @room.add_people_to_room(1)
+    assert_equal(1, @room.people_inside)
   end
 
 
