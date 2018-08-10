@@ -5,7 +5,7 @@ require_relative ("../song")
 class SongTest < MiniTest::Test
 
   def setup
-    @song = Song.new ("Let it be"), ("Artist: The Beatles, Year: 1970, Lentgh: 3:14mins"), ("https://www.youtube.com/watch?v=QQ3tlLq_Z14")
+    @song = Song.new("Let it be", "Artist: The Beatles, Year: 1970, Lentgh: 3:14mins", "https://www.youtube.com/watch?v=QQ3tlLq_Z14")
   end
 
   def test_song_has_name
