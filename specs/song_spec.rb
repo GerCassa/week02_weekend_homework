@@ -1,8 +1,8 @@
 require ("minitest/autorun")
 require ("minitest/rg")
-require_relative ("../songs")
+require_relative ("../song")
 
-class SongsTest < MiniTest::Test
+class SongTest < MiniTest::Test
 
   def setup
     @song = Song.new ("Let it be")
