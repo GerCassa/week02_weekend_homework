@@ -7,4 +7,5 @@ class Song
     @link = link
   end
 
+
 end
