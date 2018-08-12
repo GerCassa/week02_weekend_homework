@@ -9,7 +9,12 @@ class Guest
   end
 
   def money_out(amount)
+    if amount < @wallet
     @wallet -= amount
   end
+  end
 
+  def check_fav_song(songs)
+    return "Whoo!" if songs.include?(@fav_song)
+  end
 end

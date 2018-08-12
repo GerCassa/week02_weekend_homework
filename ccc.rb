@@ -4,12 +4,20 @@ class Ccc
   def initialize(rooms)
     @rooms = rooms
     @till = 0
+    @price = 10
   end
 
-  # def charge_fee(amount)
-  #   unless @room.people_inside == @room.capacity
-  #     @guest.money_out
-  #   end
-  # end
+  def check_in(room, guest)
+    if room.guests.count < room.capacity
+      charge = guest.money_out(@price)
+      if charge
+        room.guests << guest
+      end
+    end
+  end
+
+  def check_out(room, guest)
+    room.guests.delete(guest)
+  end
 
 end
